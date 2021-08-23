@@ -2,23 +2,37 @@
   <div class="view">
     <div class="container">
       <HeaderTop class="header"> </HeaderTop>
-      <div class="left1">left1</div>
-      <div class="left2">left2</div>
-      <div class="left3">left3</div>
-      <div class="mid">mid</div>
-      <div class="right1">right1</div>
-      <div class="right2">right2</div>
-      <div class="right3">right3</div>
+      <RadarChat class="left1"></RadarChat>
+      <StackedLineChart class="left2"></StackedLineChart>
+      <GradientStackedAreaChart class="left3"></GradientStackedAreaChart>
+      <MidArea class="mid"></MidArea>
+      <TableRace class="right1"></TableRace>
+      <BarRace class="right2"></BarRace>
+      <SmoothedLineChart class="right3"></SmoothedLineChart>
     </div>
   </div>
 </template>
 
 <script>
-import HeaderTop from "./HeaderTop.vue"
+import HeaderTop from "./HeaderTop.vue";
+import RadarChat from "./RadarChat.vue";
+import StackedLineChart from "./StackedLineChart.vue";
+import GradientStackedAreaChart from "./GradientStackedAreaChart.vue";
+import BarRace from "./BarRace.vue";
+import SmoothedLineChart from "./SmoothedLineChart.vue";
+import MidArea from "./MidArea.vue";
+import TableRace from "./TableRace.vue";
 export default {
-  components:{
-    HeaderTop
-  }
+  components: {
+    HeaderTop,
+    RadarChat,
+    StackedLineChart,
+    GradientStackedAreaChart,
+    BarRace,
+    SmoothedLineChart,
+    MidArea,
+    TableRace,
+  },
 };
 </script>
 
@@ -56,49 +70,49 @@ export default {
   height: 614px;
   left: 72px;
   top: 234px;
-  background-color: purple;
+  /* background-color: purple; */
 }
 .left2 {
   width: 980px;
   height: 594px;
   left: 72px;
   top: 888px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 .left3 {
   width: 980px;
   height: 574px;
   left: 72px;
   top: 1522px;
-  background-color: chocolate;
+  /* background-color: chocolate; */
 }
 .mid {
   width: 1656px;
   height: 1854px;
   left: 1092px;
   top: 242px;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 .right1 {
   width: 980px;
   height: 634px;
   left: 2788px;
   top: 234px;
-  background-color: yellow;
+  background-color: pink;
 }
 .right2 {
   width: 980px;
   height: 634px;
   left: 2788px;
   top: 908px;
-  background-color: green;
+  /* background-color: green; */
 }
 .right3 {
   width: 980px;
   height: 514px;
   left: 2788px;
   top: 1582px;
-  background-color: skyblue;
+  /* background-color: skyblue; */
 }
 </style>
 
