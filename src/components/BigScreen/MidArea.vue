@@ -1,5 +1,6 @@
 <template>
   <div class="box">
+    <AreaTitle text="全国执行情况汇总"></AreaTitle>
     <div class="number1"></div>
     <div class="number2"></div>
     <div class="number3"></div>
@@ -11,9 +12,12 @@
 
 <script>
 import MapChina from "./MapChina.vue";
+import AreaTitle from "./AreaTitle.vue";
+
 export default {
   components: {
     MapChina,
+    AreaTitle,
   },
 };
 </script>
@@ -25,15 +29,18 @@ export default {
 }
 .box .number1 {
   position: absolute;
-  background-color: pink;
+  /* background-color: pink; */
   width: 332px;
   height: 200px;
   left: 64px;
   top: 162px;
+  background-image: url(img/number.png);
 }
 .box .number2 {
   position: absolute;
-  background-color: pink;
+  /* background-color: pink; */
+  background-image: url(img/number.png);
+
   width: 332px;
   height: 200px;
   left: 476px;
@@ -41,7 +48,9 @@ export default {
 }
 .box .number3 {
   position: absolute;
-  background-color: pink;
+  /* background-color: pink; */
+  background-image: url(img/number.png);
+
   width: 332px;
   height: 200px;
   left: 874px;
@@ -49,7 +58,9 @@ export default {
 }
 .box .number4 {
   position: absolute;
-  background-color: pink;
+  /* background-color: pink; */
+  background-image: url(img/number.png);
+
   width: 332px;
   height: 200px;
   left: 1272px;
@@ -66,8 +77,8 @@ export default {
   position: absolute;
   left: 80px;
   top: 1378px;
-  height: 408px;;
+  height: 408px;
   width: 1496px;
-  background-color:yellow;
+  background-color: yellow;
 }
 </style>

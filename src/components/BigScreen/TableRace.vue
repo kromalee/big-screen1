@@ -1,15 +1,20 @@
 <template>
   <div>
+    <AreaTitle text="地区总理Top10"></AreaTitle>
     <div class="table"></div>
   </div>
 </template>
 
 <script>
-export default {};
+import AreaTitle from "./AreaTitle.vue";
+export default {
+  components: {
+    AreaTitle,
+  },
+};
 </script>
 
 <style scoped>
-
 .table {
   position: absolute;
   left: 48px;

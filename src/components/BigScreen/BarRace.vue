@@ -1,10 +1,16 @@
 <template>
-  <div ref="chart"></div>
+  <div>
+    <AreaTitle text="中案立案率Top10"></AreaTitle>
+    <div class="chart" ref="chart"></div>
+  </div>
 </template>
 
 <script>
 import * as echarts from "echarts";
+import AreaTitle from "./AreaTitle.vue";
+
 export default {
+  components: { AreaTitle },
   mounted() {
     this.$nextTick(() => {
       const myChart = echarts.init(this.$refs.chart);
@@ -70,6 +76,11 @@ export default {
   },
 };
 </script>
-
-<style>
+<style scoped>
+.chart {
+  padding: 20px;
+  padding-top: 90px;
+  width: calc(100% - 40px);
+  height: calc(100% - 110px);
+}
 </style>

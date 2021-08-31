@@ -71,12 +71,14 @@ export default {
   left: 72px;
   top: 234px;
   /* background-color: purple; */
+  background-image: url(img/left1.png);
 }
 .left2 {
   width: 980px;
   height: 594px;
   left: 72px;
   top: 888px;
+  background-image: url(img/left2.png);
   /* background-color: pink; */
 }
 .left3 {
@@ -84,6 +86,7 @@ export default {
   height: 574px;
   left: 72px;
   top: 1522px;
+  background-image: url(img/left3.png);
   /* background-color: chocolate; */
 }
 .mid {
@@ -91,6 +94,7 @@ export default {
   height: 1854px;
   left: 1092px;
   top: 242px;
+  background-image: url(img/mid.png);
   /* background-color: blueviolet; */
 }
 .right1 {
@@ -98,7 +102,8 @@ export default {
   height: 634px;
   left: 2788px;
   top: 234px;
-  background-color: pink;
+  /* background-color: pink; */
+  background-image: url(img/right1.png);
 }
 .right2 {
   width: 980px;
@@ -106,6 +111,7 @@ export default {
   left: 2788px;
   top: 908px;
   /* background-color: green; */
+  background-image: url(img/right2.png);
 }
 .right3 {
   width: 980px;
@@ -113,6 +119,7 @@ export default {
   left: 2788px;
   top: 1582px;
   /* background-color: skyblue; */
+  background-image: url(img/right3.png);
 }
 </style>
 
