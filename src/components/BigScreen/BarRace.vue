@@ -15,63 +15,93 @@ export default {
     this.$nextTick(() => {
       const myChart = echarts.init(this.$refs.chart);
 
-      var data = [];
-      for (let i = 0; i < 5; ++i) {
-        data.push(Math.round(Math.random() * 200));
-      }
-
       const option = {
+        grid: {
+          show: false,
+          left: "50%",
+          right: "10%",
+          width: "40%",
+        },
         xAxis: {
+          axisLabel: {
+            show: false,
+          },
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          splitLine: {
+            show: false,
+          },
           max: "dataMax",
         },
         yAxis: {
+          axisLabel: {
+            fontSize: "24px",
+            fontFamily: " SourceHanSansCN-Normal, SourceHanSansCN",
+            fontWeight: 400,
+            color: "#FFFFFF",
+            align: "right",
+            margin: 20,
+            showMaxLabel: true,
+          },
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
           type: "category",
-          data: ["A", "B", "C", "D", "E"],
+          data: [
+            "新疆维吾尔族自治区哈密市中级人民法院",
+            "苏州市中级人民法院",
+            "北京市第一中级人民法院",
+            "佳木斯市中级人民法院",
+            "苏州市中级人民法院",
+            "鹤岗市中级人民法院",
+            "黑龙江农垦中级人民法院",
+            "天津第一中级人民法院",
+            "秦皇岛市中级人民法院",
+            "辽宁市中级人民法院",
+          ],
           inverse: true,
-          animationDuration: 300,
-          animationDurationUpdate: 300,
-          max: 2, // only the largest 3 bars will be displayed
+          max: 9,
         },
         series: [
           {
-            realtimeSort: true,
             name: "X",
             type: "bar",
-            data: data,
+            data: [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100],
+            barMaxWidth: "24px",
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                {
+                  offset: 0,
+                  color: "rgba(1, 143, 248, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(0, 254, 246, 1)",
+                },
+              ]),
+              shadowOffsetY: 2,
+              shadowBlur: 12,
+              shadowColor: "rgba(0, 236, 246, 1)",
+            },
             label: {
               show: true,
+              color: "#ffffff",
+              fontWeight: 400,
+              fontSize: 24,
               position: "right",
-              valueAnimation: true,
+              distance: 20,
             },
           },
         ],
-        legend: {
-          show: true,
-        },
-        animationDuration: 0,
-        animationDurationUpdate: 3000,
-        animationEasing: "linear",
-        animationEasingUpdate: "linear",
       };
-
-      function run() {
-        var data = option.series[0].data;
-        for (var i = 0; i < data.length; ++i) {
-          if (Math.random() > 0.9) {
-            data[i] += Math.round(Math.random() * 2000);
-          } else {
-            data[i] += Math.round(Math.random() * 200);
-          }
-        }
-        myChart.setOption(option);
-      }
-
-      setTimeout(function () {
-        run();
-      }, 0);
-      setInterval(function () {
-        run();
-      }, 3000);
+      myChart.setOption(option);
     });
   },
 };

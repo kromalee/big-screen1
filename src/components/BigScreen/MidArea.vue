@@ -1,23 +1,26 @@
 <template>
   <div class="box">
     <AreaTitle text="全国执行情况汇总"></AreaTitle>
-    <div class="number1"></div>
-    <div class="number2"></div>
-    <div class="number3"></div>
-    <div class="number4"></div>
+    <NumberBox class="number1"></NumberBox>
+    <NumberBox class="number2"></NumberBox>
+    <NumberBox class="number3"></NumberBox>
+    <NumberBox class="number4"></NumberBox>
     <MapChina class="map-china"></MapChina>
-    <div class="table"></div>
+    <TableScroll class="table"></TableScroll>
   </div>
 </template>
 
 <script>
 import MapChina from "./MapChina.vue";
 import AreaTitle from "./AreaTitle.vue";
-
+import NumberBox from "./NumberBox.vue";
+import TableScroll from "./TableScroll.vue";
 export default {
   components: {
     MapChina,
     AreaTitle,
+    NumberBox,
+    TableScroll,
   },
 };
 </script>
@@ -68,9 +71,9 @@ export default {
 }
 .map-china {
   position: absolute;
-  width: 1080px;
+  width: 1500px;
   height: 886px;
-  left: 288px;
+  left: 78px;
   top: 408px;
 }
 .table {
@@ -79,6 +82,6 @@ export default {
   top: 1378px;
   height: 408px;
   width: 1496px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 </style>
