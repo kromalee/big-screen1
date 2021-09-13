@@ -2,8 +2,11 @@
   <div class="view">
     <div class="container">
       <HeaderTop class="header"> </HeaderTop>
-      <RadarChat class="left1"></RadarChat>
-      <StackedLineChart class="left2"></StackedLineChart>
+      <RadarChat class="left1" :options="proportionOfCaseTypes"></RadarChat>
+      <StackedLineChart
+        class="left2"
+        :options="entityFilingRate"
+      ></StackedLineChart>
       <GradientStackedAreaChart class="left3"></GradientStackedAreaChart>
       <MidArea class="mid"></MidArea>
       <TableRace class="right1"></TableRace>
@@ -23,6 +26,9 @@ import SmoothedLineChart from "./SmoothedLineChart.vue";
 import MidArea from "./MidArea.vue";
 import TableRace from "./TableRace.vue";
 export default {
+  props: {
+    proportionOfCaseTypes: Array,
+  },
   components: {
     HeaderTop,
     RadarChat,

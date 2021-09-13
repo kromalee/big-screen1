@@ -6,6 +6,9 @@
 import * as echarts from "echarts";
 import geoJson from "./geo.json";
 export default {
+  props: {
+
+  },
   mounted() {
     this.$nextTick(() => {
       echarts.registerMap("ZH", geoJson);
@@ -17,7 +20,6 @@ export default {
         tooltip: {
           show: true,
         },
-
         visualMap: {
           left: "left",
           top: "bottom",
@@ -27,7 +29,7 @@ export default {
             { min: 400, max: 600, color: "rgba(1, 141, 248, 0.3)" },
             { min: 600, max: 800, color: "rgba(0, 255, 246, 0.8)" },
             { min: 800, max: 900, color: "rgba(0, 255, 246, 0.5)" },
-            { min: 900, max: 100, color: "rgba(0, 255, 246, 0.3)" },
+            { min: 900, max: 1000, color: "rgba(0, 255, 246, 0.3)" },
           ],
           text: ["低", "高"], //取值范围的文字
           textStyle: {
@@ -61,10 +63,13 @@ export default {
 
         series: [
           {
+            name: "执行情况",
             type: "map",
             map: "ZH",
             mapType: "ZH",
-            roam: false, //不开启缩放和平移
+            roam: 'move', //不开启缩放和平移
+            layoutCenter: ["50%", "65%"],
+            layoutSize: 887,
             zoom: 1.23, //视角缩放比例
             selectedMode: false,
             itemStyle: {

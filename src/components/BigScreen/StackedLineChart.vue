@@ -90,9 +90,9 @@ export default {
             type: "line",
             symbol: "circle",
             symbolSize: 12,
-            itemStyle: {
-              color: "#1890FF",
-            },
+            // itemStyle: {
+            //   color: "#1890FF",
+            // },
             data: [116, 149, 89, 9, 95, 139, 60, 134, 69, 25, 66, 50],
           },
           {
