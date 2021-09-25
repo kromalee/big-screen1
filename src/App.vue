@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <BigScreen :proportion-of-case-types="proportionOfCaseTypes"></BigScreen>
+    <BigScreen v-bind="options"></BigScreen>
   </div>
 </template>
 
 <script>
 import BigScreen from "./components/BigScreen/index.vue";
-
+function randomValue() {
+  return Math.round(Math.random() * 1000);
+}
 export default {
   components: {
     BigScreen,
@@ -67,7 +69,7 @@ export default {
         {
           area: "北京",
           trend: +2,
-          count: 5079,
+          count: 5080,
         },
         {
           area: "北京",
@@ -101,16 +103,16 @@ export default {
         },
       ],
       midCourtFilingTop10: [
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 1000 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 900 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 800 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 700 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 600 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 500 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 400 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 300 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 200 },
-        { name: "新疆维吾尔族自治区哈密市中级人民法院", value: 100 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院1", value: 1000 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院2", value: 900 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院3", value: 800 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院4", value: 700 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院5", value: 600 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院6", value: 500 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院7", value: 400 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院8", value: 300 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院9", value: 200 },
+        { name: "新疆维吾尔族自治区哈密市中级人民法院0", value: 100 },
       ],
       trendOfFiling2: [
         {
@@ -227,6 +229,19 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    options() {
+      return {
+        proportionOfCaseTypes: this.proportionOfCaseTypes,
+        entityCaseFilingRate: this.entityCaseFilingRate,
+        trendOfFiling: this.trendOfFiling,
+        regionalDistributorTop10: this.regionalDistributorTop10,
+        midCourtFilingTop10: this.midCourtFilingTop10,
+        trendOfFiling2: this.trendOfFiling2,
+        implementation: this.implementation,
+      };
+    },
   },
 };
 </script>

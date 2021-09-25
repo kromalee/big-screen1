@@ -1,12 +1,31 @@
 <template>
   <div class="box">
     <AreaTitle text="全国执行情况汇总"></AreaTitle>
-    <NumberBox class="number1"></NumberBox>
-    <NumberBox class="number2"></NumberBox>
-    <NumberBox class="number3"></NumberBox>
-    <NumberBox class="number4"></NumberBox>
-    <MapChina class="map-china"></MapChina>
-    <TableScroll class="table"></TableScroll>
+    <NumberBox
+      class="number1"
+      :title="count && count[0] && count[0].name"
+      :numner="count && count[0] && count[0].value"
+    ></NumberBox>
+    <NumberBox
+      class="number2"
+      :title="count && count[1] && count[1].name"
+      :numner="count && count[1] && count[1].value"
+    ></NumberBox>
+    <NumberBox
+      class="number3"
+      :title="count && count[2] && count[2].name"
+      :numner="count && count[2] && count[2].value"
+    ></NumberBox>
+    <NumberBox
+      class="number4"
+      :title="count && count[3] && count[3].name"
+      :numner="count && count[3] && count[3].value"
+    ></NumberBox>
+    <MapChina class="map-china" :option="countByArea"></MapChina>
+    <TableScroll
+      class="table"
+      :option="option && option.rencentCountByArea"
+    ></TableScroll>
   </div>
 </template>
 
@@ -21,6 +40,17 @@ export default {
     AreaTitle,
     NumberBox,
     TableScroll,
+  },
+  props: {
+    option: Object,
+  },
+  computed: {
+    count() {
+      return this.option && this.option.count;
+    },
+    countByArea() {
+      return this.option && this.option.countByArea;
+    },
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <AreaTitle text="地区总理Top10"></AreaTitle>
-    <DataTable :columns="columns" :rows="rows" class="table">
+    <DataTable :columns="columns" :rows="option || []" class="table">
       <template #field-trend="{ value }">
         <template>
           <div v-if="value > 0" class="red-text">↑{{ value }}</div>
@@ -20,6 +20,9 @@ export default {
     AreaTitle,
     DataTable,
   },
+  props: {
+    option: Array,
+  },
   data() {
     return {
       columns: [
@@ -34,43 +37,6 @@ export default {
         {
           field: "count",
           name: "总 量",
-        },
-      ],
-      rows: [
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: -2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
-        },
-        {
-          area: "北京",
-          trend: +2,
-          count: 5079,
         },
       ],
     };

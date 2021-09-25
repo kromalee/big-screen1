@@ -3,14 +3,11 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
-.header-top{
+.header-top {
   background-image: url(img/header.png);
 }
-
 </style>
