@@ -1,6 +1,6 @@
 ##### 一个可视化的页面
-[feat]
 
+###### feat
 - [x] 动态适应分辨率
 - [x] echarts 雷达图
 - [x] 计数面板
@@ -12,6 +12,6 @@
 - [x] echarts 地图
 
 
-[preview]
+###### preview
 
 ![image](https://user-images.githubusercontent.com/26086447/186343524-1325fdea-ab33-4b64-b538-0997a9055c4a.png)
